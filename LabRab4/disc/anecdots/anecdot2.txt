@@ -1,0 +1,4 @@
+Dentist: “This will hurt a little.”
+Patient: “OK.”
+
+Dentist: “I’ve been having an affair with your wife for a while now.”
