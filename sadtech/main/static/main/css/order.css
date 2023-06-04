@@ -1,0 +1,159 @@
+main {
+    padding: 1%;
+}
+
+main .forms  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#id_delivery_method {
+    display: none;
+}
+
+main .user_data_form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.first {
+    display: flex;
+    flex-direction: row;
+}
+
+main .user_data_form .column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .user_data_form .column .column_elements {
+    width: 90%;
+    padding: 2%;
+    margin: 5% 0;
+}
+
+main .user_data_form .column .column_elements input {
+    width: 100%;
+    padding: 2.5%;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+main .user_data_form .column .column_elements button {
+    width: 50%;
+    padding: 2.5%;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+main .delivery-options {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .delivery-options button {
+    width: 30%;
+    color: black;
+    text-decoration: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main .delivery-options button img {
+    width: 15%;
+    margin: 0 10% 0 0;
+}
+
+main .right {
+    width: 35%;
+    margin: 2% 0 0 0;
+}
+
+main .right .succeed_order {
+    padding: 5%;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .right .succeed_order .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3% 0;
+}
+
+main .right .succeed_order .row #count {
+    border-bottom: 1px dashed grey;
+}
+
+main .right .succeed_order .row #method {
+    border: none;
+    display: flex;
+    text-align: right;
+    cursor: default;
+    width: 50%;
+}
+
+main .right .succeed_order #underLine {
+    border-bottom: 2px solid grey;
+}
+
+main .right .succeed_order button {
+    margin: auto;
+    width: 50%;
+    padding: 2%;
+    background: red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main .dev_met {
+    width: 80%;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.active, .btn:hover {
+    border: 2px solid #04ff00 !important;
+    background-color: rgba(4, 255, 0, 0.4) !important;
+
+}
+
+main .dev_met .btn {
+    width: 30%;
+    padding: 1.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
+    border: 2px solid grey;
+}
+
+main .dev_met button img {
+    width: 20%;
+    margin: 0 10% 0 0;
+}
