@@ -1,0 +1,92 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/css/order.css' %}">
+{% endblock %}
+
+{% block title%} order{% endblock %}
+
+{% block content %}
+
+<h1>Оформление заказа</h1>
+
+<div class="forms">
+    <form class="user_data_form" method="post">
+        {% csrf_token %}
+        <div class="left">
+            {{ form.order }}
+            {{ form.recipient_address }}
+            {{ form.delivery_method }}
+                <div>
+                    {{ form.errors }}
+                    <h1>1. Укажите данные получателя заказа</h1>
+                    <div class="first">
+                        <div class="column">
+                            <div class="column_elements">
+                                {{ form.recipient_first_name }}
+                            </div>
+                            <div class="column_elements">
+                                {{ form.recipient_phone_number }}
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="column_elements">
+                                {{ form.recipient_email }}
+                            </div>
+                            <div class="column_elements">
+                                <a>Получить код</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h1>2. Где и как вы хотите получить заказ?</h1>
+        </div>
+        <div class="right">
+            <div class="succeed_order">
+                <div class="row">
+                    <h2>Итого:</h2>
+                    <h2>{{ fullPrice }} &#8381;</h2>
+                </div>
+                <div class="row" id="underLine">
+                    <p id="count">{{ count }}</p>
+                    <p>{{ fullPrice }} &#8381;</p>
+                </div>
+                <div class="row">
+                    <p>способ получения</p>
+                    <input id="method" value="{{ choice }}">
+                </div>
+                <div class="row">
+                    <p>Можно получить:</p>
+                    <p>{{ getDate }}</p>
+                </div>
+                <div class="row">
+                    <p>оплата:</p>
+                    <p>при получении заказа</p>
+                </div>
+                <div class="row">
+                    <p>У вас есть {{ userBonus.amount }} бонусов</p>
+                    <p>Использовать{{ form.discount }}</p>
+                </div>
+                <button type="submit">Подтвердить заказ</button>
+            </div>
+        </div>
+    </form>
+    <div class="dev_met">
+        <button id="first" class="btn active" type="button" onclick="changeSelectValue('самовывоз')">
+            <img src="{% static 'main/img/methods/point.png' %}"/>Самовывоз<br/>бесплатно
+        </button>
+        <button id="second" class="btn" type="button" onclick="changeSelectValue('доставка курьером')">
+            <img src="{% static 'main/img/methods/img_1.png' %}"/>Доставка курьером<br/>200 &#8381;
+        </button>
+        <button id="third" class="btn" type="button" onclick="changeSelectValue('транспортной компанией')">
+            <img src="{% static 'main/img/methods/img_2.png' %}"/>Транспортная компания<br/>договором
+        </button>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'main/js/changes.js' %}"></script>
+{% endblock %}

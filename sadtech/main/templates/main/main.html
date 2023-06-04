@@ -1,0 +1,49 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+{% endblock %}
+
+{% block title%} catalog{% endblock %}
+
+{% block header %}
+<div class="nav_bar">
+  <ul>
+    <li><a href="{% url 'main' %}">каталог</a></li>
+    <li><a>акции</a></li>
+    <li><a>сервис</a></li>
+    <li><a>информация</a></li>
+    <li><a>контакты</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="cat">
+  <ul>
+    {% for c in cat %}
+    <li><a href="{% url 'category' c.id %}">{{ c.name }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="elements">
+
+  <div class="row">
+    {% for elem in prod %}
+      <div class="elem">
+        <img src="{{ elem.mainImage }}"/>
+        <a href="{% url 'product' pk=elem.id %}"><h3>{{ elem.pName }}</h3></a>
+        <h3>{{ elem.price }}&#8381;</h3>
+      </div>
+    {% if forloop.counter|divisibleby:3 %}
+  </div>
+  <div class="row">
+    {% endif %}
+
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock %}
