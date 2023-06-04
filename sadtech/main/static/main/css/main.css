@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: #04ff00;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #FFF;
+  background-image: -webkit-gradient(linear,
+                     40% 0%,
+                     75% 84%,
+                     from(#4D9C41),
+                     to(#19911D),
+                     color-stop(.6,#54DE5D))
+}
+
+.first_line {
+    display: flex;
+    background: #f0f0f0;
+    padding: 0.5%;
+}
+
+.first_elements {
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reg {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.reg a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 35%;
+    color: black;
+}
+
+.reg img {
+    width: 5%;
+}
+
+.search_bar {
+    display: flex;
+    flex-direction: row;
+    padding: 0.75%;
+    align-items: center;
+}
+
+.search_bar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25%;
+}
+
+.search_bar input {
+    margin-right: 5%;
+    font-size: 110%;
+}
+
+.main_elements {
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_elements .site_name {
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_elements .site_name img {
+    width: 40%;
+}
+
+.main_elements .site_name .name {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: center;
+    text-decoration: underline #035902;
+}
+
+.main_elements .site_name .name #sad {
+    color: #04ff00;
+}
+
+.main_elements .site_name .name #tech {
+    color: #035902;
+}
+
+.main_elements .site_name hr {
+    display: block;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    width: 20%;
+}
+.main_elements .basket {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_elements .basket img {
+    width: 20%;
+}
+
+.main_elements .basket a {
+    text-decoration: none;
+    color: black;
+    font-size: 120%;
+    background: #04ff00;
+    padding: 1.5%;
+    border: 1px solid #035902;
+    border-radius: 5px;
+}
+
+.underline {
+    text-decoration: underline;
+}
